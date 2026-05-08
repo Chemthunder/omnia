@@ -1,7 +1,6 @@
 package com.peak.omnia.api.template;
 
 import net.minecraft.entity.damage.DamageType;
-import net.minecraft.entity.decoration.painting.PaintingVariant;
 import net.minecraft.registry.Registerable;
 import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.RegistryKeys;
