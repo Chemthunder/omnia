@@ -1,5 +1,6 @@
 package com.peak.omnia.api.template;
 
+import com.peak.omnia.api.DataRegistry;
 import net.minecraft.block.entity.BannerPattern;
 import net.minecraft.registry.Registerable;
 import net.minecraft.registry.RegistryKey;
@@ -12,13 +13,13 @@ import java.util.List;
 /**
  * @author Chemthunder
  */
-public class BannerPatternRegistry {
-    private final String modid;
+public class BannerPatternRegistry extends DataRegistry {
     private final List<BannerPatternData> DATA = new ArrayList<>();
 
     public BannerPatternRegistry(String modid) {
-        this.modid = modid;
+        super(modid);
     }
+
 
     public RegistryKey<BannerPattern> register(String name, Identifier texture) {
         RegistryKey<BannerPattern> key = RegistryKey.of(RegistryKeys.BANNER_PATTERN, Identifier.of(this.modid, name));

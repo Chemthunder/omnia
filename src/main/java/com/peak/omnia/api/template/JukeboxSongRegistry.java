@@ -1,5 +1,6 @@
 package com.peak.omnia.api.template;
 
+import com.peak.omnia.api.DataRegistry;
 import net.minecraft.block.jukebox.JukeboxSong;
 import net.minecraft.registry.Registerable;
 import net.minecraft.registry.RegistryKey;
@@ -15,12 +16,11 @@ import java.util.List;
 /**
  * @author Chemthunder
  */
-public class JukeboxSongRegistry {
-    private final String modid;
+public class JukeboxSongRegistry extends DataRegistry {
     private final List<JukeboxSongData> DATA = new ArrayList<>();
 
     public JukeboxSongRegistry(String modid) {
-        this.modid = modid;
+        super(modid);
     }
 
     public RegistryKey<JukeboxSong> register(String name, RegistryEntry<SoundEvent> song, Text description, float lengthInSeconds, int comparatorOutput) {

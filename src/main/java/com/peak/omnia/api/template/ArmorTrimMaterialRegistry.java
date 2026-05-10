@@ -1,5 +1,6 @@
 package com.peak.omnia.api.template;
 
+import com.peak.omnia.api.DataRegistry;
 import net.minecraft.item.ArmorMaterial;
 import net.minecraft.item.Item;
 import net.minecraft.item.trim.ArmorTrimMaterial;
@@ -17,12 +18,11 @@ import java.util.Map;
 /**
  * @author Chemthunder
  */
-public class ArmorTrimMaterialRegistry {
-    private final String modid;
+public class ArmorTrimMaterialRegistry extends DataRegistry {
     private final List<TrimData> DATA = new ArrayList<>();
 
     public ArmorTrimMaterialRegistry(String modid) {
-        this.modid = modid;
+        super(modid);
     }
 
     public RegistryKey<ArmorTrimMaterial> register(String name, RegistryEntry<Item> ingredient, float itemModelIndex, Map<RegistryEntry<ArmorMaterial>, String> overrideArmorMaterials) {

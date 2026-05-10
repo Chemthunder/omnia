@@ -1,5 +1,6 @@
 package com.peak.omnia.api.template;
 
+import com.peak.omnia.api.DataRegistry;
 import net.minecraft.block.Block;
 import net.minecraft.component.ComponentType;
 import net.minecraft.component.type.AttributeModifierSlot;
@@ -20,12 +21,11 @@ import java.util.List;
 /**
  * @author Chemthunder
  */
-public class EnchantmentRegistry {
-    private final String modid;
+public class EnchantmentRegistry extends DataRegistry {
     private final List<EnchantmentData> DATA = new ArrayList<>();
 
     public EnchantmentRegistry(String modid) {
-        this.modid = modid;
+        super(modid);
     }
 
     public RegistryKey<Enchantment> register(String name, TagKey<Item> acceptableItems, ComponentType<Unit> effect, int weight, int maxLevel, int cost, int anvilCost) {
