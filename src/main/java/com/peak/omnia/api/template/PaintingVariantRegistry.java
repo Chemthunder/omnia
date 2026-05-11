@@ -21,7 +21,13 @@ public class PaintingVariantRegistry extends DataRegistry {
     }
 
     public RegistryKey<PaintingVariant> register(String name, int width, int height, Identifier texture) {
-        RegistryKey<PaintingVariant> key = RegistryKey.of(RegistryKeys.PAINTING_VARIANT, Identifier.of(this.modid, name));
+        RegistryKey<PaintingVariant> key = RegistryKey.of(
+            RegistryKeys.PAINTING_VARIANT,
+            Identifier.of(
+                this.modid,
+                name
+            )
+        );
 
         PaintingVariantData data = new PaintingVariantData(
                 key,
@@ -44,5 +50,9 @@ public class PaintingVariantRegistry extends DataRegistry {
         });
     }
 
-    record PaintingVariantData(RegistryKey<PaintingVariant> key, int width, int height, Identifier texture) {}
+    record PaintingVariantData(RegistryKey<PaintingVariant> key,
+        int width,
+        int height,
+        Identifier texture
+    ) {}
 }

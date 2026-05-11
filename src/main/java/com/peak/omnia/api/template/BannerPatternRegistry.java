@@ -22,7 +22,13 @@ public class BannerPatternRegistry extends DataRegistry {
 
 
     public RegistryKey<BannerPattern> register(String name, Identifier texture) {
-        RegistryKey<BannerPattern> key = RegistryKey.of(RegistryKeys.BANNER_PATTERN, Identifier.of(this.modid, name));
+        RegistryKey<BannerPattern> key = RegistryKey.of(
+            RegistryKeys.BANNER_PATTERN,
+                Identifier.of(
+                    this.modid,
+                    name
+                )
+        );
 
         BannerPatternData data = new BannerPatternData(
                 key,
@@ -43,5 +49,8 @@ public class BannerPatternRegistry extends DataRegistry {
         });
     }
 
-    record BannerPatternData(RegistryKey<BannerPattern> key, Identifier texture, String name) {}
+    record BannerPatternData(RegistryKey<BannerPattern> key,
+        Identifier texture,
+        String name
+    ) {}
 }

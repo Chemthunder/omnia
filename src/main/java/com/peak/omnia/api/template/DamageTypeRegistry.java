@@ -21,16 +21,35 @@ public class DamageTypeRegistry extends DataRegistry {
     }
 
     public RegistryKey<DamageType> register(String name, float exhaustion) {
-        RegistryKey<DamageType> key = RegistryKey.of(RegistryKeys.DAMAGE_TYPE, Identifier.of(this.modid, name));
-        DamageSourceData data = new DamageSourceData(key, name, exhaustion);
+        RegistryKey<DamageType> key = RegistryKey.of(
+            RegistryKeys.DAMAGE_TYPE,
+            Identifier.of(
+                this.modid,
+                name
+            )
+        );
+
+        DamageSourceData data = new DamageSourceData(
+            key,
+            name,
+            exhaustion
+        );
 
         DATA.add(data);
         return key;
     }
 
     public void bootstrap(Registerable<DamageType> registerable) {
-        this.DATA.forEach(damageSourceData -> registerable.register(damageSourceData.key, new DamageType(damageSourceData.name, damageSourceData.exhaustion)));
+        this.DATA.forEach(damageSourceData -> {
+            registerable.register(damageSourceData.key, new DamageType(
+                damageSourceData.name,
+                damageSourceData.exhaustion
+            ));
+        });
     }
 
-    record DamageSourceData(RegistryKey<DamageType> key, String name, float exhaustion) {}
+    record DamageSourceData(RegistryKey<DamageType> key,
+        String name,
+        float exhaustion
+    ) {}
 }

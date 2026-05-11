@@ -26,7 +26,13 @@ public class ArmorTrimMaterialRegistry extends DataRegistry {
     }
 
     public RegistryKey<ArmorTrimMaterial> register(String name, RegistryEntry<Item> ingredient, float itemModelIndex, Map<RegistryEntry<ArmorMaterial>, String> overrideArmorMaterials) {
-        RegistryKey<ArmorTrimMaterial> key = RegistryKey.of(RegistryKeys.TRIM_MATERIAL, Identifier.of(this.modid, name));
+        RegistryKey<ArmorTrimMaterial> key = RegistryKey.of(
+            RegistryKeys.TRIM_MATERIAL,
+            Identifier.of(
+                this.modid,
+                name
+            )
+        );
 
         TrimData data = new TrimData(
                 key,
@@ -53,5 +59,11 @@ public class ArmorTrimMaterialRegistry extends DataRegistry {
         });
     }
 
-    record TrimData(RegistryKey<ArmorTrimMaterial> key, String name, RegistryEntry<Item> ingredient, float itemModelIndex, Map<RegistryEntry<ArmorMaterial>, String> overrideArmorMaterials, Text description) {}
+    record TrimData(RegistryKey<ArmorTrimMaterial> key,
+        String name,
+        RegistryEntry<Item> ingredient,
+        float itemModelIndex,
+        Map<RegistryEntry<ArmorMaterial>, String> overrideArmorMaterials,
+        Text description
+    ) {}
 }

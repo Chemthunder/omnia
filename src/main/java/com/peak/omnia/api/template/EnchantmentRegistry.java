@@ -29,7 +29,13 @@ public class EnchantmentRegistry extends DataRegistry {
     }
 
     public RegistryKey<Enchantment> register(String name, TagKey<Item> acceptableItems, ComponentType<Unit> effect, int weight, int maxLevel, int cost, int anvilCost) {
-        RegistryKey<Enchantment> key = RegistryKey.of(RegistryKeys.ENCHANTMENT, Identifier.of(this.modid, name));
+        RegistryKey<Enchantment> key = RegistryKey.of(
+            RegistryKeys.ENCHANTMENT,
+            Identifier.of(
+                this.modid,
+                name
+            )
+        );
 
         EnchantmentData data = new EnchantmentData(
                 key,
@@ -67,9 +73,10 @@ public class EnchantmentRegistry extends DataRegistry {
     }
 
     public void bootstrap(Registerable<Enchantment> registerable) {
-        RegistryEntryLookup<Enchantment> enchantmentLookup = registerable.getRegistryLookup(RegistryKeys.ENCHANTMENT);
-        RegistryEntryLookup<EntityType<?>> entityTypeLookup = registerable.getRegistryLookup(RegistryKeys.ENTITY_TYPE);
-        RegistryEntryLookup<Block> blockLookup = registerable.getRegistryLookup(RegistryKeys.BLOCK);
+        // RegistryEntryLookup<Enchantment> enchantmentLookup = registerable.getRegistryLookup(RegistryKeys.ENCHANTMENT);
+        // RegistryEntryLookup<EntityType<?>> entityTypeLookup = registerable.getRegistryLookup(RegistryKeys.ENTITY_TYPE);
+        // RegistryEntryLookup<Block> blockLookup = registerable.getRegistryLookup(RegistryKeys.BLOCK);
+        // NOT USED, MAY DELETE
         RegistryEntryLookup<Item> itemLookup = registerable.getRegistryLookup(RegistryKeys.ITEM);
 
         this.DATA.forEach(enchantmentData -> {
@@ -90,5 +97,17 @@ public class EnchantmentRegistry extends DataRegistry {
         });
     }
 
-    record EnchantmentData(RegistryKey<Enchantment> key, String name, TagKey<Item> acceptableItems, ComponentType<Unit> effect, AttributeModifierSlot slot, int weight, int maxLevel, int cost, int anvilCost) {}
+    record EnchantmentData(RegistryKey<Enchantment> key,
+        String name,
+        TagKey<Item> acceptableItems,
+        ComponentType<Unit> effect,
+        AttributeModifierSlot slot,
+        int weight,
+        int maxLevel,
+        int cost,
+        int anvilCost
+    ) {}
 }
+/*
+* TODO: combine the two methods into a large method and a smaller override.
+*/

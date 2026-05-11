@@ -24,7 +24,13 @@ public class JukeboxSongRegistry extends DataRegistry {
     }
 
     public RegistryKey<JukeboxSong> register(String name, RegistryEntry<SoundEvent> song, Text description, float lengthInSeconds, int comparatorOutput) {
-        RegistryKey<JukeboxSong> key = RegistryKey.of(RegistryKeys.JUKEBOX_SONG, Identifier.of(this.modid, name));
+        RegistryKey<JukeboxSong> key = RegistryKey.of(
+            RegistryKeys.JUKEBOX_SONG,
+            Identifier.of(
+                this.modid,
+                name
+            )
+        );
 
         JukeboxSongData data = new JukeboxSongData(
                 key,
@@ -51,5 +57,10 @@ public class JukeboxSongRegistry extends DataRegistry {
         });
     }
 
-    record JukeboxSongData(RegistryKey<JukeboxSong> key, RegistryEntry<SoundEvent> song, Text description, float lengthInSeconds, int comparatorOutput) {}
+    record JukeboxSongData(RegistryKey<JukeboxSong> key,
+        RegistryEntry<SoundEvent> song,
+        Text description,
+        float lengthInSeconds,
+        int comparatorOutput
+    ) {} // possibly add a way to get the sound length optionally using the song?
 }
