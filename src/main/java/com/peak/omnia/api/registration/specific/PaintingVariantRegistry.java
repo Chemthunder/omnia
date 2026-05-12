@@ -1,6 +1,6 @@
-package com.peak.omnia.api.template;
+package com.peak.omnia.api.registration.specific;
 
-import com.peak.omnia.api.DataRegistry;
+import com.peak.omnia.api.registration.DataRegistry;
 import net.minecraft.entity.decoration.painting.PaintingVariant;
 import net.minecraft.registry.Registerable;
 import net.minecraft.registry.RegistryKey;
@@ -13,11 +13,11 @@ import java.util.List;
 /**
  * @author Chemthunder
  */
-public class PaintingVariantRegistry extends DataRegistry {
+public class PaintingVariantRegistry extends DataRegistry<PaintingVariant> {
     private final List<PaintingVariantData> DATA = new ArrayList<>();
 
     public PaintingVariantRegistry(String modid) {
-        super(modid);
+        super(modid, RegistryKeys.PAINTING_VARIANT);
     }
 
     public RegistryKey<PaintingVariant> register(String name, int width, int height, Identifier texture) {

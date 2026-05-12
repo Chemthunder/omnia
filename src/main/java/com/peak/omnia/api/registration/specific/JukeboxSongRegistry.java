@@ -1,6 +1,6 @@
-package com.peak.omnia.api.template;
+package com.peak.omnia.api.registration.specific;
 
-import com.peak.omnia.api.DataRegistry;
+import com.peak.omnia.api.registration.DataRegistry;
 import net.minecraft.block.jukebox.JukeboxSong;
 import net.minecraft.registry.Registerable;
 import net.minecraft.registry.RegistryKey;
@@ -16,11 +16,11 @@ import java.util.List;
 /**
  * @author Chemthunder
  */
-public class JukeboxSongRegistry extends DataRegistry {
+public class JukeboxSongRegistry extends DataRegistry<JukeboxSong> {
     private final List<JukeboxSongData> DATA = new ArrayList<>();
 
     public JukeboxSongRegistry(String modid) {
-        super(modid);
+        super(modid, RegistryKeys.JUKEBOX_SONG);
     }
 
     public RegistryKey<JukeboxSong> register(String name, RegistryEntry<SoundEvent> song, Text description, float lengthInSeconds, int comparatorOutput) {
@@ -62,5 +62,5 @@ public class JukeboxSongRegistry extends DataRegistry {
         Text description,
         float lengthInSeconds,
         int comparatorOutput
-    ) {} // possibly add a way to get the sound length optionally using the song?
+    ) {}
 }
