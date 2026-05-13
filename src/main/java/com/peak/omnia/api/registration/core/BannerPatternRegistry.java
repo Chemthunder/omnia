@@ -1,4 +1,4 @@
-package com.peak.omnia.api.registration.specific;
+package com.peak.omnia.api.registration.core;
 
 import com.peak.omnia.api.registration.DataRegistry;
 import net.minecraft.block.entity.BannerPattern;

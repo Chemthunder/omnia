@@ -1,4 +1,4 @@
-package com.peak.omnia.api.registration.specific;
+package com.peak.omnia.api.registration.core;
 
 import com.peak.omnia.api.registration.DataRegistry;
 import net.minecraft.component.ComponentType;
@@ -71,10 +71,6 @@ public class EnchantmentRegistry extends DataRegistry<Enchantment> {
     }
 
     public void bootstrap(Registerable<Enchantment> registerable) {
-        // RegistryEntryLookup<Enchantment> enchantmentLookup = registerable.getRegistryLookup(RegistryKeys.ENCHANTMENT);
-        // RegistryEntryLookup<EntityType<?>> entityTypeLookup = registerable.getRegistryLookup(RegistryKeys.ENTITY_TYPE);
-        // RegistryEntryLookup<Block> blockLookup = registerable.getRegistryLookup(RegistryKeys.BLOCK);
-        // NOT USED, MAY DELETE
         RegistryEntryLookup<Item> itemLookup = registerable.getRegistryLookup(RegistryKeys.ITEM);
 
         this.DATA.forEach(enchantmentData -> {

@@ -1,10 +1,9 @@
 package com.peak.omnia.api.registration;
 
-import net.fabricmc.fabric.api.datagen.v1.provider.FabricDynamicRegistryProvider;
 import net.minecraft.registry.Registerable;
 import net.minecraft.registry.Registry;
+import net.minecraft.registry.RegistryBuilder;
 import net.minecraft.registry.RegistryKey;
-import net.minecraft.registry.RegistryWrapper;
 
 /**
  * @author Chemthunder
@@ -20,7 +19,7 @@ public abstract class DataRegistry<Type> {
 
     public void bootstrap(Registerable<Type> registerable) {}
 
-    public void loadConfigurations(RegistryWrapper.WrapperLookup wrapperLookup, FabricDynamicRegistryProvider.Entries entries) {
-        entries.addAll(wrapperLookup.getWrapperOrThrow(this.key));
+    public void build(RegistryBuilder registryBuilder) {
+        registryBuilder.addRegistry(this.key, this::bootstrap);
     }
 }

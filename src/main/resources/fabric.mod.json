@@ -18,7 +18,7 @@
           "com.peak.omnia.impl.Omnia"
 		],
 		"fabric-datagen": [
-          "com.peak.omnia.data.OmniaDataGen"
+          "com.peak.omnia.impl.Omnia"
 		]
 	},
 	"mixins": [
