@@ -20,7 +20,6 @@ public class BannerPatternRegistry extends DataRegistry<BannerPattern> {
         super(modid, RegistryKeys.BANNER_PATTERN);
     }
 
-
     public RegistryKey<BannerPattern> register(String name, Identifier texture) {
         RegistryKey<BannerPattern> key = RegistryKey.of(
             RegistryKeys.BANNER_PATTERN,

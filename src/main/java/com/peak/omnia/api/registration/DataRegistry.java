@@ -5,6 +5,10 @@ import net.minecraft.registry.Registry;
 import net.minecraft.registry.RegistryBuilder;
 import net.minecraft.registry.RegistryKey;
 
+import net.fabricmc.fabric.api.datagen.v1.provider.FabricDynamicRegistryProvider;
+import net.minecraft.registry.RegistryWrapper;
+import org.slf4j.LoggerFactory;
+
 /**
  * @author Chemthunder
  */
@@ -21,5 +25,9 @@ public abstract class DataRegistry<Type> {
 
     public void build(RegistryBuilder registryBuilder) {
         registryBuilder.addRegistry(this.key, this::bootstrap);
+    }
+
+    public void addEntries(RegistryWrapper.WrapperLookup wrapperLookup, FabricDynamicRegistryProvider.Entries entries) {
+        entries.addAll(wrapperLookup.getWrapperOrThrow(this.key));
     }
 }

@@ -23,13 +23,14 @@ public class DataInitializer {
     public void loadConfigurations(RegistryWrapper.WrapperLookup wrapperLookup, FabricDynamicRegistryProvider.Entries entries) {
         this.providers.forEach(dataRegistry -> {
             entries.addAll(wrapperLookup.getWrapperOrThrow(dataRegistry.key));
-            LoggerFactory.getLogger(modid).info("Successfully loaded registry {}", dataRegistry.key);
+            LoggerFactory.getLogger(modid).info("Successfully configured registry {}", dataRegistry.key);
         });
     }
 
     public void buildRegistries(RegistryBuilder registryBuilder) {
         this.providers.forEach(dataRegistry -> {
             dataRegistry.build(registryBuilder);
+            LoggerFactory.getLogger(modid).info("Successfully built registry {}", dataRegistry.key);
         });
     }
 
