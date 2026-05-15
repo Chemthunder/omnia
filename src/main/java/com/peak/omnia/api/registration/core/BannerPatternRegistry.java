@@ -1,6 +1,6 @@
 package com.peak.omnia.api.registration.core;
 
-import com.peak.omnia.api.registration.DataRegistry;
+import com.peak.omnia.api.registration.AbstractDataRegistry;
 import net.minecraft.block.entity.BannerPattern;
 import net.minecraft.registry.Registerable;
 import net.minecraft.registry.RegistryKey;
@@ -13,7 +13,7 @@ import java.util.List;
 /**
  * @author Chemthunder
  */
-public class BannerPatternRegistry extends DataRegistry<BannerPattern> {
+public class BannerPatternRegistry extends AbstractDataRegistry<BannerPattern> {
     private final List<BannerPatternData> DATA = new ArrayList<>();
 
     public BannerPatternRegistry(String modid) {

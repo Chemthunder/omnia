@@ -13,9 +13,9 @@ import java.util.List;
 public class DataInitializer {
     private final String modid;
 
-    private final List<DataRegistry<?>> providers;
+    private final List<AbstractDataRegistry<?>> providers;
 
-    public DataInitializer(String modid, List<DataRegistry<?>> registries) {
+    public DataInitializer(String modid, List<AbstractDataRegistry<?>> registries) {
         this.modid = modid;
         this.providers = registries;
     }
@@ -34,7 +34,7 @@ public class DataInitializer {
         });
     }
 
-    public List<DataRegistry<?>> getProviders() {
+    public List<AbstractDataRegistry<?>> getProviders() {
         return this.providers;
     }
 }

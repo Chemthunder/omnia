@@ -1,6 +1,6 @@
 package com.peak.omnia.api.registration.core;
 
-import com.peak.omnia.api.registration.DataRegistry;
+import com.peak.omnia.api.registration.AbstractDataRegistry;
 import net.minecraft.block.Block;
 import net.minecraft.registry.Registerable;
 import net.minecraft.registry.RegistryKey;
@@ -16,7 +16,7 @@ import java.util.OptionalLong;
 /**
  * @author Chemthunder
  */
-public class DimensionTypeRegistry extends DataRegistry<DimensionType> {
+public class DimensionTypeRegistry extends AbstractDataRegistry<DimensionType> {
     private final List<DimensionTypeData> DATA = new ArrayList<>();
 
     public DimensionTypeRegistry(String modid) {

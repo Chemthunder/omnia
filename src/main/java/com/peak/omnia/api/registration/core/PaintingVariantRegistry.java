@@ -1,6 +1,6 @@
 package com.peak.omnia.api.registration.core;
 
-import com.peak.omnia.api.registration.DataRegistry;
+import com.peak.omnia.api.registration.AbstractDataRegistry;
 import net.minecraft.entity.decoration.painting.PaintingVariant;
 import net.minecraft.registry.Registerable;
 import net.minecraft.registry.RegistryKey;
@@ -13,7 +13,7 @@ import java.util.List;
 /**
  * @author Chemthunder
  */
-public class PaintingVariantRegistry extends DataRegistry<PaintingVariant> {
+public class PaintingVariantRegistry extends AbstractDataRegistry<PaintingVariant> {
     private final List<PaintingVariantData> DATA = new ArrayList<>();
 
     public PaintingVariantRegistry(String modid) {

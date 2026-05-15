@@ -1,6 +1,6 @@
 package com.peak.omnia.api.registration.core;
 
-import com.peak.omnia.api.registration.DataRegistry;
+import com.peak.omnia.api.registration.AbstractDataRegistry;
 import net.minecraft.entity.damage.DamageType;
 import net.minecraft.registry.Registerable;
 import net.minecraft.registry.RegistryKey;
@@ -13,7 +13,7 @@ import java.util.List;
 /**
  * @author Chemthunder
  */
-public class DamageTypeRegistry extends DataRegistry<DamageType> {
+public class DamageTypeRegistry extends AbstractDataRegistry<DamageType> {
     private final List<DamageSourceData> DATA = new ArrayList<>();
 
     public DamageTypeRegistry(String modid) {

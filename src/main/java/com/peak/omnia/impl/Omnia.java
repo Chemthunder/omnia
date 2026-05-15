@@ -20,6 +20,6 @@ public class Omnia implements ModInitializer, DataGeneratorEntrypoint {
 
     public void onInitializeDataGenerator(FabricDataGenerator fabricDataGenerator) {
         FabricDataGenerator.Pack pack = fabricDataGenerator.createPack();
-        LOGGER.info("Omnia has initialized internally! [DATA]")
+        LOGGER.info("Omnia has initialized internally! [DATA]");
     }
 }

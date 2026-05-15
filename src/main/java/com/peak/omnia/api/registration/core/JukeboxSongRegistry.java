@@ -1,6 +1,6 @@
 package com.peak.omnia.api.registration.core;
 
-import com.peak.omnia.api.registration.DataRegistry;
+import com.peak.omnia.api.registration.AbstractDataRegistry;
 import net.minecraft.block.jukebox.JukeboxSong;
 import net.minecraft.registry.Registerable;
 import net.minecraft.registry.RegistryKey;
@@ -16,7 +16,7 @@ import java.util.List;
 /**
  * @author Chemthunder
  */
-public class JukeboxSongRegistry extends DataRegistry<JukeboxSong> {
+public class JukeboxSongRegistry extends AbstractDataRegistry<JukeboxSong> {
     private final List<JukeboxSongData> DATA = new ArrayList<>();
 
     public JukeboxSongRegistry(String modid) {

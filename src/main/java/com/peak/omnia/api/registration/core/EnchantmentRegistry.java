@@ -1,6 +1,6 @@
 package com.peak.omnia.api.registration.core;
 
-import com.peak.omnia.api.registration.DataRegistry;
+import com.peak.omnia.api.registration.AbstractDataRegistry;
 import net.minecraft.component.ComponentType;
 import net.minecraft.component.type.AttributeModifierSlot;
 import net.minecraft.enchantment.Enchantment;
@@ -19,36 +19,11 @@ import java.util.List;
 /**
  * @author Chemthunder
  */
-public class EnchantmentRegistry extends DataRegistry<Enchantment> {
+public class EnchantmentRegistry extends AbstractDataRegistry<Enchantment> {
     private final List<EnchantmentData> DATA = new ArrayList<>();
 
     public EnchantmentRegistry(String modid) {
         super(modid, RegistryKeys.ENCHANTMENT);
-    }
-
-    public RegistryKey<Enchantment> register(String name, TagKey<Item> acceptableItems, ComponentType<Unit> effect, int weight, int maxLevel, int cost, int anvilCost) {
-        RegistryKey<Enchantment> key = RegistryKey.of(
-            RegistryKeys.ENCHANTMENT,
-            Identifier.of(
-                this.modid,
-                name
-            )
-        );
-
-        EnchantmentData data = new EnchantmentData(
-                key,
-                name,
-                acceptableItems,
-                effect,
-                AttributeModifierSlot.MAINHAND,
-                weight,
-                maxLevel,
-                cost,
-                anvilCost
-        );
-
-        DATA.add(data);
-        return key;
     }
 
     public RegistryKey<Enchantment> register(String name, TagKey<Item> acceptableItems, ComponentType<Unit> effect, AttributeModifierSlot slot, int weight, int maxLevel, int cost, int anvilCost) {

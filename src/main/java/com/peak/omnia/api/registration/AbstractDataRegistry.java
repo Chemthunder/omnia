@@ -7,16 +7,15 @@ import net.minecraft.registry.RegistryKey;
 
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricDynamicRegistryProvider;
 import net.minecraft.registry.RegistryWrapper;
-import org.slf4j.LoggerFactory;
 
 /**
  * @author Chemthunder
  */
-public abstract class DataRegistry<Type> {
+public abstract class AbstractDataRegistry<Type> {
     public final String modid;
     public final RegistryKey<Registry<Type>> key;
 
-    public DataRegistry(String modid, RegistryKey<Registry<Type>> key) {
+    public AbstractDataRegistry(String modid, RegistryKey<Registry<Type>> key) {
         this.modid = modid;
         this.key = key;
     }

@@ -1,6 +1,6 @@
 package com.peak.omnia.api.registration.core;
 
-import com.peak.omnia.api.registration.DataRegistry;
+import com.peak.omnia.api.registration.AbstractDataRegistry;
 import net.minecraft.item.ArmorMaterial;
 import net.minecraft.item.Item;
 import net.minecraft.item.trim.ArmorTrimMaterial;
@@ -18,7 +18,7 @@ import java.util.Map;
 /**
  * @author Chemthunder
  */
-public class ArmorTrimMaterialRegistry extends DataRegistry<ArmorTrimMaterial> {
+public class ArmorTrimMaterialRegistry extends AbstractDataRegistry<ArmorTrimMaterial> {
     private final List<TrimData> DATA = new ArrayList<>();
 
     public ArmorTrimMaterialRegistry(String modid) {
