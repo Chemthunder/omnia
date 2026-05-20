@@ -3,7 +3,6 @@ package com.peak.omnia.impl;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.datagen.v1.DataGeneratorEntrypoint;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataGenerator;
-import net.minecraft.registry.RegistryBuilder;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
