@@ -3,9 +3,7 @@ package com.peak.omnia.api.util.resources;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricLanguageProvider.TranslationBuilder;
 import net.minecraft.enchantment.Enchantment;
 import net.minecraft.entity.damage.DamageType;
-import net.minecraft.item.ItemGroup;
 import net.minecraft.registry.RegistryKey;
-import net.minecraft.sound.SoundEvent;
 
 /**
  * @author Chemthunder
@@ -28,13 +26,13 @@ public class LangUtils {
         translationBuilder.add(apply + ".desc", desc);
     }
 
-    public static void subtitle(TranslationBuilder translationBuilder, SoundEvent event, String subtitle) {
-        String apply = "subtitle." + event.getId().getNamespace() + "." + event.getId().getPath();
-        translationBuilder.add(apply, subtitle);
-    }
-
-    public static void itemGroup(TranslationBuilder translationBuilder, ItemGroup group, String name) {
-        String apply = "itemGroup." + group.toString();
-        translationBuilder.add(apply, name);
-    }
+//    public static void subtitle(TranslationBuilder translationBuilder, SoundEvent event, String subtitle) {
+//        String apply = "subtitle." + event.getId().getNamespace() + "." + event.getId().getPath();
+//        translationBuilder.add(apply, subtitle);
+//    }
+//
+//    public static void itemGroup(TranslationBuilder translationBuilder, ItemGroup group, String name) {
+//        String apply = "itemGroup." + group.toString();
+//        translationBuilder.add(apply, name);
+//    }
 }
