@@ -1,12 +1,7 @@
 package com.peak.omnia.api.registration;
 
-import net.minecraft.registry.Registerable;
-import net.minecraft.registry.Registry;
-import net.minecraft.registry.RegistryBuilder;
-import net.minecraft.registry.RegistryKey;
-
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricDynamicRegistryProvider;
-import net.minecraft.registry.RegistryWrapper;
+import net.minecraft.registry.*;
 
 /**
  * @author Chemthunder
