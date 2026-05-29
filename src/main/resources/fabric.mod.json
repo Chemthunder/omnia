@@ -1,33 +1,33 @@
 {
-	"schemaVersion": 1,
-	"id": "omnia",
-	"version": "${version}",
-	"name": "Omnia",
-	"description": "A simple library for data generation.",
-	"authors": [
-		"Chemthunder"
-	],
-	"contact": {
-		"sources": "https://github.com/Chemthunder/omnia"
-	},
-	"license": "CC0-1.0",
-	"icon": "assets/omnia/icon.png",
-	"environment": "*",
-	"entrypoints": {
-		"main": [
-          "com.peak.omnia.impl.Omnia"
-		],
-		"fabric-datagen": [
-          "com.peak.omnia.impl.Omnia"
-		]
-	},
-	"mixins": [
-		"omnia.mixins.json"
-	],
-	"depends": {
-		"fabricloader": ">=0.15.11",
-		"minecraft": "~1.21.1",
-		"java": ">=21",
-		"fabric-api": "*"
-	}
+  "schemaVersion": 1,
+  "id": "omnia",
+  "version": "${version}",
+  "name": "Omnia",
+  "description": "A simple library for data generation.",
+  "authors": [
+    "Chemthunder"
+  ],
+  "contributors": [
+    "FabricMC"
+  ],
+  "contact": {
+    "sources": "https://github.com/Chemthunder/omnia"
+  },
+  "license": "CC0-1.0",
+  "icon": "assets/omnia/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "com.peak.omnia.core.Omnia"
+    ],
+    "fabric-datagen": [
+      "com.peak.omnia.core.Omnia"
+    ]
+  }
+  "depends": {
+    "fabricloader": ">=0.15.11",
+    "minecraft": "~1.21.1",
+    "java": ">=21",
+    "fabric-api": "*"
+  }
 }

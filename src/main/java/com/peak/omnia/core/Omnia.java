@@ -1,4 +1,4 @@
-package com.peak.omnia.impl;
+package com.peak.omnia.core;
 
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.datagen.v1.DataGeneratorEntrypoint;

@@ -25,14 +25,4 @@ public class LangUtils {
         translationBuilder.add(apply, name);
         translationBuilder.add(apply + ".desc", desc);
     }
-
-//    public static void subtitle(TranslationBuilder translationBuilder, SoundEvent event, String subtitle) {
-//        String apply = "subtitle." + event.getId().getNamespace() + "." + event.getId().getPath();
-//        translationBuilder.add(apply, subtitle);
-//    }
-//
-//    public static void itemGroup(TranslationBuilder translationBuilder, ItemGroup group, String name) {
-//        String apply = "itemGroup." + group.toString();
-//        translationBuilder.add(apply, name);
-//    }
 }
